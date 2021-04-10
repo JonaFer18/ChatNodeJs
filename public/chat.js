@@ -8,6 +8,8 @@ var message= document.getElementById('message');
  outpot= document.getElementById('outpot'),
 btn2= document.getElementById('clear'),
  feedback= document.getElementById('feedback');
+var audio = document.getElementById("audio");
+
 
 //emitir eventos
 btn.addEventListener('click',function(){
@@ -30,6 +32,7 @@ message.addEventListener('keypress',function(){
 socket.on('chat',function(data){
 	feedback.innerHTML="";
 	outpot.innerHTML+='<p><b><i><strong>'+data.handle+':</i></b></strong>'+data.message+'</p>';
+	audio.play();
 })
 
 socket.on('typing',function(data){
