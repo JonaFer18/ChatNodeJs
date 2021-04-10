@@ -24,6 +24,9 @@ btn2.addEventListener('click',function(){
 	outpot.innerHTML="";
 	message.innerHTML="";
 });
+message.addEventListener('click',function(){
+	message.innerHTML="";
+});
 message.addEventListener('keypress',function(){
 	socket.emit('typing', handle.value);
 });
