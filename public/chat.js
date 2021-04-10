@@ -22,6 +22,7 @@ btn.addEventListener('click',function(){
 });
 btn2.addEventListener('click',function(){
 	outpot.innerHTML="";
+	message.innerHTML="";
 });
 message.addEventListener('keypress',function(){
 	socket.emit('typing', handle.value);
@@ -33,7 +34,6 @@ socket.on('chat',function(data){
 	feedback.innerHTML="";
 	outpot.innerHTML+='<p><b><i><strong>'+data.handle+':</i></b></strong>'+data.message+'</p>';
 	audio.play();
-	document.getElementById('message').submit();
 })
 
 socket.on('typing',function(data){
