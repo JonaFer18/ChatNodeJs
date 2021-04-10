@@ -33,6 +33,7 @@ socket.on('chat',function(data){
 	feedback.innerHTML="";
 	outpot.innerHTML+='<p><b><i><strong>'+data.handle+':</i></b></strong>'+data.message+'</p>';
 	audio.play();
+	document.getElementById('message').reset()
 })
 
 socket.on('typing',function(data){
