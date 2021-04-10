@@ -6,6 +6,7 @@ var message= document.getElementById('message');
   handle= document.getElementById('handle'),
  btn= document.getElementById('send'),
  outpot= document.getElementById('outpot'),
+btn2= document.getElementById('clear'),
  feedback= document.getElementById('feedback');
 
 //emitir eventos
@@ -17,7 +18,9 @@ btn.addEventListener('click',function(){
 
 	});
 });
-
+btn2.addEventListener('click',function(){
+	outpot.innerHTML="";
+});
 message.addEventListener('keypress',function(){
 	socket.emit('typing', handle.value);
 });

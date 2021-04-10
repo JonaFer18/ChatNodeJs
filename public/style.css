@@ -63,3 +63,13 @@ background:black;
     width:453px;
     border:1px solid white; 
     }
+#clear{
+	margin:0 auto;
+	margin-left: 80px;
+	font-size :20px;
+	color: white;
+	background:black;
+	height:28px;
+    width:453px;
+    border:1px solid white; 
+    }
