@@ -3,10 +3,10 @@ var socket =require('socket.io');
 
 //app
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT;
 var server = app.listen(port,function(){
 
-	console.log('escuchando puerto 3000');
+	console.log('aaaa');
 })
 //static
 app.use(express.static('public'));
